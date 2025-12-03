@@ -117,6 +117,20 @@ http://localhost:5173
 | `/category/:categoryId` | ItemListContainer   | Lista de productos por categoría  |
 | `/item/:itemId`         | ItemDetailContainer | Detalle de un producto específico |
 
+## 🔥 Firestore (Firebase)
+
+Colecciones utilizadas:
+
+- `products`: catálogo de productos.
+- `orders`: órdenes generadas desde el checkout.
+
+Cada orden almacena:
+
+- Datos del comprador (`buyer`)
+- Detalle de items (`items`)
+- Total (`total`)
+- Fecha de creación (`createdAt`)
+
 ## 👨‍💻 Autor
 
 **Díaz**
