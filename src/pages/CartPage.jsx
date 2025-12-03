@@ -110,9 +110,9 @@ export default function CartPage() {
               <p className="text-muted small">
                 * Impuestos y envío se calculan en el checkout.
               </p>
-              <button type="button" className="btn btn-primary w-100">
+              <Link to="/checkout" className="btn btn-primary w-100">
                 Proceder al pago
-              </button>
+              </Link>
               <Link to="/" className="btn btn-link w-100 mt-2">
                 Seguir comprando
               </Link>

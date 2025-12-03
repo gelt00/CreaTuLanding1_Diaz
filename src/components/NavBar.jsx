@@ -10,7 +10,7 @@ export default function NavBar() {
   const toggleMenu = () => setIsOpen((p) => !p);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top shadow-sm">
+    <nav className="navbar navbar-expand-lg navbar-light border-bottom sticky-top shadow-sm cafe-navbar">
       <div className="container-fluid px-4">
         <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
           <span className="fs-3 me-2">🛍️</span>

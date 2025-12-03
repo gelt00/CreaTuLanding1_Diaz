@@ -27,18 +27,32 @@ export default function ItemDetailContainer() {
     return () => { active = false; };
   }, [id]);
 
-  if (status === "loading") {
-    return <section className="container my-5"><p className="text-muted">Cargando detalle…</p></section>;
-  }
+if (status === "loading") {
+  return (
+    <section className="container my-5">
+      <div className="d-flex flex-column align-items-center py-5">
+        <div
+          className="spinner-border text-primary mb-3"
+          role="status"
+          aria-hidden="true"
+        />
+        <p className="text-muted mb-0">Cargando detalle…</p>
+      </div>
+    </section>
+  );
+}
 
-  if (!item) {
-    return (
-      <section className="container my-5">
-        <p className="text-muted">Producto no encontrado.</p>
-        <Link to="/" className="btn btn-outline-secondary">Volver</Link>
-      </section>
-    );
-  }
+if (!item) {
+  return (
+    <section className="container my-5">
+      <p className="text-muted">Producto no encontrado.</p>
+      <Link to="/" className="btn btn-outline-secondary">
+        Volver
+      </Link>
+    </section>
+  );
+}
+
 
   return (
     <section className="container my-5">

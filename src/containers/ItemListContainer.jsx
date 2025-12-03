@@ -34,7 +34,14 @@ export default function ItemListContainer() {
   if (status === "loading") {
     return (
       <section className="container my-5">
-        <p className="text-muted">Cargando productos…</p>
+        <div className="d-flex flex-column align-items-center py-5">
+          <div
+            className="spinner-border text-primary mb-3"
+            role="status"
+            aria-hidden="true"
+          />
+          <p className="text-muted mb-0">Cargando productos…</p>
+        </div>
       </section>
     );
   }
@@ -42,7 +49,9 @@ export default function ItemListContainer() {
   if (status === "error") {
     return (
       <section className="container my-5">
-        <p className="text-danger">Ocurrió un error al cargar los productos.</p>
+        <div className="alert alert-danger">
+          Ocurrió un error al cargar los productos. Intenta nuevamente.
+        </div>
       </section>
     );
   }
@@ -50,9 +59,9 @@ export default function ItemListContainer() {
   return (
     <section className="container my-5">
       {categoryId ? (
-        <h2 className="mb-4">Categoría: {categoryId}</h2>
+        <h2 className="mb-4 section-title">Categoría: {categoryId}</h2>
       ) : (
-        <h2 className="mb-4">Catálogo</h2>
+        <h2 className="mb-4 section-title">Catálogo</h2>
       )}
       <ItemList items={items} />
     </section>

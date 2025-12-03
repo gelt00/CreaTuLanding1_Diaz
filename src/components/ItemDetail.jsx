@@ -68,11 +68,11 @@ export default function ItemDetail({ item }) {
 
                 <button
                   type="button"
-                  className={`btn ${
-                    added ? "btn-success" : "btn-primary"
-                  } w-100`}
+                  className={`btn btn-primary w-100 ${
+                    added ? "btn-added" : ""
+                  }`}
                   onClick={handleAdd}
-                  disabled={added}
+                  disabled={isInCart(item.id)}
                 >
                   {added ? (
                     <>
